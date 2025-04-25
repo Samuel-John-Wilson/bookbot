@@ -35,14 +35,25 @@ def character_count(path_to_file):
             characters[char] = 1
     # Sort the dictionary by its keys and return as a new dictionary
     sorted_characters = dict(sorted(characters.items()))
-    return sorted_characters        
-        
+    return sorted_characters
+
 def get_only_alpha(dic):
     alpha_dic = {key: value for key, value in dic.items() if key.isalpha()}
 
     return alpha_dic
 
 
-print(f"{get_only_alpha(character_count('books/frankenstein.txt'))}")
+def sort_on(dict):
+    return dict["num"]        
+        
+
+def dictionary_to_list(dict):
+    list_of_dic = []
+    
+    for key, value in dict.items():
+        list_of_dic.append({"char": key, "num": value})
+    list_of_dic.sort(reverse=True, key=sort_on)
+    return list_of_dic
+#print(f"{get_only_alpha(character_count('books/frankenstein.txt'))}")
 
       

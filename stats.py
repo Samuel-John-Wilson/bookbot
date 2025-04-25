@@ -43,6 +43,6 @@ def get_only_alpha(dic):
     return alpha_dic
 
 
-
+print(f"{get_only_alpha(character_count('books/frankenstein.txt'))}")
 
       

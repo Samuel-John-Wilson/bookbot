@@ -19,6 +19,8 @@ def print_counts(path_to_file):
     print(f"{word_count(path_to_file)} Words found in the document")
     print(f"Characters found: {character_count(path_to_file)}")
 
-print_counts('books/frankenstein.txt')
+#print_counts('books/frankenstein.txt')
+
+
 
 
